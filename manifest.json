@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Azure DevOps PR Title Cleaner",
+  "version": "1.0.0",
+  "description": "Automatically removes 'Merged' word from PR titles in Azure DevOps.",
+  "author": "Yaroslav Shparuk",
+  "homepage_url": "https://github.com/yaroslavshparuk/azure-devops-commit-message-cleaner",
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dev.azure.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "shparuk1996@gmail.com"
+    }
+  }
+}
